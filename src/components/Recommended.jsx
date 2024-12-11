@@ -1,5 +1,5 @@
 const Recommended = () => {
-    return <div>Recommended</div>;
+    return <div></div>;
 };
 
 export default Recommended;
