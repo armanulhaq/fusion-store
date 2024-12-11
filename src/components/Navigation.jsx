@@ -5,7 +5,7 @@ import { FaUserAlt } from "react-icons/fa";
 
 const Navigation = () => {
     return (
-        <nav className="flex justify-between border-b items-center ml-[20rem] gap-4 p-5 z-20 pr-[20rem]">
+        <nav className="flex justify-between border-b items-center lg:ml-[20rem] gap-4 p-5 z-20 lg:pr-[20rem]">
             <Input
                 className="w-[400px] relative "
                 type="text"
