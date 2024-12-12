@@ -3,16 +3,16 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 
-const Category = () => {
-    const categories = ["All", "Sneakers", "Flats", "Sandals", "Heels"];
+const Price = () => {
+    const categories = ["All", "$0-$50", "$50-$100", "$100-$150", "Over $150"];
     const [selectedCategory, setSelectedCategory] = useState(categories[0]);
     const handleCategoryChange = (category) => {
         setSelectedCategory(category);
     };
 
     return (
-        <div>
-            <h2 className="text-[17px] font-bold">Category</h2>
+        <div className="mt-5">
+            <h2 className="text-[17px] font-bold">Price</h2>
             <RadioGroup
                 className="mt-2"
                 value={selectedCategory}
@@ -46,4 +46,4 @@ const Category = () => {
     );
 };
 
-export default Category;
+export default Price;

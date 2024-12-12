@@ -97,12 +97,12 @@ const ProductCard = ({
                         </div>
                     </div>
                     <div className="flex items-center gap-2 text-sm text-gray-600">
-                        <Truck className="w-6 h-6" />
-                        <span className="text-xs lg:text-base">
+                        <Truck className="w-5 h-5" />
+                        <span className="text-xs lg:text-sm">
                             Free delivery on orders over $100
                         </span>
                     </div>
-                    <Button className="w-full bg-[#000] hover:bg-blue-800 text-white">
+                    <Button className="w-full bg-black hover:bg-gray-800 text-white">
                         <ShoppingCart className="w-4 h-4 mr-2" />
                         Add to Cart
                     </Button>

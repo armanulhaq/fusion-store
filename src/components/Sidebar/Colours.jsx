@@ -1,18 +1,18 @@
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { useState } from "react";
 import { cn } from "@/lib/utils";
+import { useState } from "react";
 
-const Category = () => {
-    const categories = ["All", "Sneakers", "Flats", "Sandals", "Heels"];
+const Colours = () => {
+    const categories = ["All", "Black", "Blue", "Red", "Green", "White"];
     const [selectedCategory, setSelectedCategory] = useState(categories[0]);
     const handleCategoryChange = (category) => {
         setSelectedCategory(category);
     };
 
     return (
-        <div>
-            <h2 className="text-[17px] font-bold">Category</h2>
+        <div className="mt-5">
+            <h2 className="text-[17px] font-bold">Colours</h2>
             <RadioGroup
                 className="mt-2"
                 value={selectedCategory}
@@ -46,4 +46,4 @@ const Category = () => {
     );
 };
 
-export default Category;
+export default Colours;

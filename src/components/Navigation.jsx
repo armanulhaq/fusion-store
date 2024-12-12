@@ -5,13 +5,12 @@ import { FaUserAlt } from "react-icons/fa";
 
 const Navigation = () => {
     return (
-        <nav className="flex justify-between border-b items-center md:ml-[15rem] lg:ml-[18rem] gap-3 p-5 z-20 lg:pr-[2rem]">
-            <div className="flex gap-3">
-                <img className="w-6 h-6 lg:w-7 lg:h-7" src="/logo.png" alt="" />
-                <div className="hidden lg:block font-extrabold text-[15px] lg:text-[20px]">
-                    Fusion <span className="text-[#4361ee]"> Store</span>
-                </div>
-            </div>
+        <nav className="flex justify-between border-b items-center lg:pr-20 gap-3 p-5 z-20 ">
+            <img
+                className="lg:hidden w-6 h-6 lg:w-7 lg:h-7"
+                src="/logo.png"
+                alt=""
+            />
 
             <Input
                 className="w-[190px] lg:w-[400px] relative text-sm"
