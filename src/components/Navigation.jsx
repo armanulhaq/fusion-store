@@ -5,7 +5,7 @@ import { FaUserAlt } from "react-icons/fa";
 
 const Navigation = () => {
     return (
-        <nav className="flex justify-between border-b items-center lg:ml-[20rem] gap-3 p-5 z-20 lg:pr-[20rem]">
+        <nav className="flex justify-between border-b items-center md:ml-[15rem] lg:ml-[18rem] gap-3 p-5 z-20 lg:pr-[2rem]">
             <div className="flex gap-3">
                 <img className="w-6 h-6 lg:w-7 lg:h-7" src="/logo.png" alt="" />
                 <div className="hidden lg:block font-extrabold text-[15px] lg:text-[20px]">
