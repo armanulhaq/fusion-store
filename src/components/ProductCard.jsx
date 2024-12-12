@@ -92,7 +92,7 @@ const ProductCard = ({
                                     key={size}
                                     onClick={() => setSelectedSize(size)}
                                     className={cn(
-                                        "px-2 lg:px-3 lg:py-1 rounded border text-sm font-medium transition-colors",
+                                        "px-4 py-2 rounded border text-sm font-medium transition-colors",
                                         selectedSize === size
                                             ? " bg-[#000] text-white"
                                             : "border-gray-200 hover:border-gray-300"
