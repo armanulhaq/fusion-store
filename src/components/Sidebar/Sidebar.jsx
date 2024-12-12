@@ -11,7 +11,7 @@ const Sidebar = () => {
                     Fusion <span className="text-[#4361ee]"> Store</span>
                 </div>
             </div>
-            <div className="w-full flex flex-col mt-10 px-12">
+            <div className="w-full flex flex-col mt-10 md:px-7 lg:px-12">
                 <Category />
                 <Price />
                 <Colours />

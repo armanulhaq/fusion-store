@@ -19,13 +19,13 @@ const Navigation = () => {
             />
             <div className="flex text-center gap-4 lg:gap-8">
                 <a href="#">
-                    <FaShoppingCart className="w-5 h-5" color="#4361ee" />
+                    <FaShoppingCart className="w-5 h-5" color="black" />
                 </a>
                 <a href="#">
-                    <FaHeart className="w-5 h-5" color="#4361ee" />
+                    <FaHeart className="w-5 h-5" color="black" />
                 </a>
                 <a href="#">
-                    <FaUserAlt className="w-5 h-5" color="#4361ee" />
+                    <FaUserAlt className="w-5 h-5" color="black" />
                 </a>
             </div>
         </nav>

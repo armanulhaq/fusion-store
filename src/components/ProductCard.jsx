@@ -68,11 +68,18 @@ const ProductCard = ({
                         <div className="text-xs">{reviews}</div>
                     </div>
                     <div className="flex items-center gap-2">
-                        <span className="text-2xl font-bold text-gray-900">
-                            {newPrice}
+                        <span className="text-2xl font-bold text-red-700">
+                            ${newPrice}
                         </span>
                         <span className="text-gray-500 line-through">
-                            {prevPrice}
+                            ${prevPrice}
+                        </span>
+                        <span className="text-red-500">
+                            {(
+                                ((Number(prevPrice) - Number(newPrice)) / 100) *
+                                100
+                            ).toFixed()}
+                            % off
                         </span>
                     </div>
                     <div className="space-y-2">
@@ -96,9 +103,9 @@ const ProductCard = ({
                             ))}
                         </div>
                     </div>
-                    <div className="flex items-center gap-2 text-sm text-gray-600">
+                    <div className="flex items-center gap-2 my-2 text-sm text-gray-600">
                         <Truck className="w-5 h-5" />
-                        <span className="text-xs lg:text-sm">
+                        <span className="text-xs lg:text-xs ">
                             Free delivery on orders over $100
                         </span>
                     </div>
