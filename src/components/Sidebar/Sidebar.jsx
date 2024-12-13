@@ -2,7 +2,7 @@ import Category from "./Category";
 import Colours from "./Colours";
 import Price from "./Price";
 
-const Sidebar = () => {
+const Sidebar = ({ handleChange }) => {
     return (
         <div className="hidden md:block border-r lg:block w-[15%] h-[100vh]">
             <div className="flex gap-2   items-center p-5 z-20 ">
@@ -12,9 +12,9 @@ const Sidebar = () => {
                 </div>
             </div>
             <div className="w-full flex flex-col mt-10 md:px-7 lg:px-12">
-                <Category />
-                <Price />
-                <Colours />
+                <Category handleChange={handleChange} />
+                <Price handleChange={handleChange} />
+                <Colours handleChange={handleChange} />
             </div>
         </div>
     );

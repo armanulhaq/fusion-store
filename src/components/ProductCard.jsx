@@ -15,12 +15,11 @@ const ProductCard = ({
     reviews,
     prevPrice,
     newPrice,
-    company,
-    color,
-    category,
+    discount,
 }) => {
     const sizes = [6, 7, 8, 9, 10];
     const [selectedSize, setSelectedSize] = useState(0);
+    console.log(discount);
 
     return (
         <section>
@@ -72,14 +71,7 @@ const ProductCard = ({
                             ${newPrice}
                         </span>
                         <span className="text-gray-500 line-through">
-                            ${prevPrice}
-                        </span>
-                        <span className="text-red-500">
-                            {(
-                                ((Number(prevPrice) - Number(newPrice)) / 100) *
-                                100
-                            ).toFixed()}
-                            % off
+                            {prevPrice}
                         </span>
                     </div>
                     <div className="space-y-2">
@@ -92,7 +84,7 @@ const ProductCard = ({
                                     key={size}
                                     onClick={() => setSelectedSize(size)}
                                     className={cn(
-                                        "px-4 py-2 rounded border text-sm font-medium transition-colors",
+                                        "px-4 py-2 rounded-full border text-sm font-medium transition-colors",
                                         selectedSize === size
                                             ? " bg-[#000] text-white"
                                             : "border-gray-200 hover:border-gray-300"

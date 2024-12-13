@@ -1,49 +1,53 @@
-import { Label } from "@/components/ui/label";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { cn } from "@/lib/utils";
-import { useState } from "react";
+import Input from "./Input";
 
-const Colours = () => {
-    const categories = ["All", "Black", "Blue", "Red", "Green", "White"];
-    const [selectedCategory, setSelectedCategory] = useState(categories[0]);
-    const handleCategoryChange = (category) => {
-        setSelectedCategory(category);
-    };
-
+const Colors = ({ handleChange }) => {
     return (
-        <div className="mt-5">
-            <h2 className="text-[17px] font-bold">Colours</h2>
-            <RadioGroup
-                className="mt-2"
-                value={selectedCategory}
-                onValueChange={handleCategoryChange}
-            >
-                {categories.map((category, index) => (
-                    <div
-                        key={index}
-                        className="flex items-center space-x-2 cursor-pointer transition-all duration-200 ease-in-out p-1"
-                    >
-                        <RadioGroupItem
-                            value={category}
-                            id={`option-${index}`}
-                            className={cn(
-                                "w-5 h-5 rounded-full border-gray-200",
-                                selectedCategory === category
-                                    ? "bg-black text-white"
-                                    : "bg-white text-black"
-                            )}
-                        />
-                        <Label
-                            htmlFor={`option-${index}`}
-                            className="text-gray-700 font-medium text-sm"
-                        >
-                            {category}
-                        </Label>
-                    </div>
-                ))}
-            </RadioGroup>
-        </div>
+        <>
+            <div>
+                <h2 className="mt-5 mb-3 text-[17px] font-bold">Colours</h2>
+
+                <Input
+                    handleChange={handleChange}
+                    value="black"
+                    title="Black"
+                    name="test1"
+                    color="black"
+                />
+
+                <Input
+                    handleChange={handleChange}
+                    value="blue"
+                    title="Blue"
+                    name="test1"
+                    color="blue"
+                />
+
+                <Input
+                    handleChange={handleChange}
+                    value="red"
+                    title="Red"
+                    name="test1"
+                    color="red"
+                />
+
+                <Input
+                    handleChange={handleChange}
+                    value="green"
+                    title="Green"
+                    name="test1"
+                    color="green"
+                />
+
+                <Input
+                    handleChange={handleChange}
+                    value="white"
+                    title="White"
+                    name="test1"
+                    color="white"
+                />
+            </div>
+        </>
     );
 };
 
-export default Colours;
+export default Colors;

@@ -3,7 +3,7 @@ import { FaShoppingCart } from "react-icons/fa";
 import { FaHeart } from "react-icons/fa6";
 import { FaUserAlt } from "react-icons/fa";
 
-const Navigation = () => {
+const Navigation = ({ handleInputChange, query }) => {
     return (
         <nav className="flex justify-between border-b items-center lg:pr-20 gap-3 p-5 z-20 ">
             <img
@@ -16,6 +16,8 @@ const Navigation = () => {
                 className="w-[190px] lg:w-[400px] relative text-sm"
                 type="text"
                 placeholder="Search"
+                onChange={handleInputChange}
+                value={query}
             />
             <div className="flex text-center gap-4 lg:gap-8">
                 <a href="#">
