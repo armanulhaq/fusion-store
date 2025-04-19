@@ -41,6 +41,17 @@ function App() {
         }));
     };
 
+    // ------------ Clear Filters -----------
+    const clearFilters = () => {
+        setFilters({
+            category: null,
+            color: null,
+            price: null,
+            company: null,
+        });
+        setQuery("");
+    };
+
     function filteredData(products, filters, query) {
         let filteredProducts = products;
 
@@ -81,7 +92,11 @@ function App() {
     return (
         <>
             <div className="flex">
-                <Sidebar handleChange={handleChange} />
+                <Sidebar
+                    handleChange={handleChange}
+                    clearFilters={clearFilters}
+                    filters={filters}
+                />
                 <div>
                     <Navigation
                         query={query}

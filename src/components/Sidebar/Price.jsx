@@ -1,6 +1,6 @@
 import Input from "./Input";
 
-const Price = ({ handleChange }) => {
+const Price = ({ handleChange, selectedPrice }) => {
     return (
         <>
             <div className="ml">
@@ -11,6 +11,7 @@ const Price = ({ handleChange }) => {
                         value={50}
                         title="$0 - 50"
                         name="price"
+                        selectedValue={selectedPrice}
                     />
 
                     <Input
@@ -18,6 +19,7 @@ const Price = ({ handleChange }) => {
                         value={100}
                         title="$50 - $100"
                         name="price"
+                        selectedValue={selectedPrice}
                     />
 
                     <Input
@@ -25,6 +27,7 @@ const Price = ({ handleChange }) => {
                         value={150}
                         title="$100 - $150"
                         name="price"
+                        selectedValue={selectedPrice}
                     />
 
                     <Input
@@ -32,6 +35,7 @@ const Price = ({ handleChange }) => {
                         value={200}
                         title="Over $150"
                         name="price"
+                        selectedValue={selectedPrice}
                     />
                 </div>
             </div>

@@ -1,6 +1,6 @@
 import Input from "./Input";
 
-const Colors = ({ handleChange }) => {
+const Colors = ({ handleChange, selectedColor }) => {
     return (
         <>
             <div>
@@ -12,6 +12,7 @@ const Colors = ({ handleChange }) => {
                     title="Black"
                     name="color"
                     color="black"
+                    selectedValue={selectedColor}
                 />
 
                 <Input
@@ -20,6 +21,7 @@ const Colors = ({ handleChange }) => {
                     title="Blue"
                     name="color"
                     color="blue"
+                    selectedValue={selectedColor}
                 />
 
                 <Input
@@ -28,6 +30,7 @@ const Colors = ({ handleChange }) => {
                     title="Red"
                     name="color"
                     color="red"
+                    selectedValue={selectedColor}
                 />
 
                 <Input
@@ -36,6 +39,7 @@ const Colors = ({ handleChange }) => {
                     title="Green"
                     name="color"
                     color="green"
+                    selectedValue={selectedColor}
                 />
 
                 <Input
@@ -44,6 +48,7 @@ const Colors = ({ handleChange }) => {
                     title="White"
                     name="color"
                     color="white"
+                    selectedValue={selectedColor}
                 />
             </div>
         </>

@@ -1,4 +1,4 @@
-const Input = ({ handleChange, value, title, name, color }) => {
+const Input = ({ handleChange, value, title, name, color, selectedValue }) => {
     return (
         <label className="flex gap-2">
             <div className="checkmark" style={{ backgroundColor: color }}></div>
@@ -7,8 +7,8 @@ const Input = ({ handleChange, value, title, name, color }) => {
                 type="radio"
                 value={value}
                 name={name}
+                checked={selectedValue === value.toString()}
             />
-
             {title}
         </label>
     );
