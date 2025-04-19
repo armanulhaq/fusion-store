@@ -1,6 +1,6 @@
 const Input = ({ handleChange, value, title, name, color, selectedValue }) => {
     return (
-        <label className="flex gap-2">
+        <div className="flex gap-2 items-center">
             <div className="checkmark" style={{ backgroundColor: color }}></div>
             <input
                 onChange={handleChange}
@@ -9,8 +9,8 @@ const Input = ({ handleChange, value, title, name, color, selectedValue }) => {
                 name={name}
                 checked={selectedValue === value.toString()}
             />
-            {title}
-        </label>
+            <span>{title}</span>
+        </div>
     );
 };
 
