@@ -6,8 +6,12 @@ import Sidebar from "./components/Sidebar/Sidebar";
 import products from "@/db/db";
 
 function App() {
-    console.log(products);
-    const [selectedCategory, setSelectedCategory] = useState(null);
+    const [filters, setFilters] = useState({
+        category: null,
+        color: null,
+        price: null,
+        company: null,
+    });
     // ----------- Input Filter -----------
     const [query, setQuery] = useState("");
 
@@ -17,20 +21,27 @@ function App() {
 
     const filteredItems = products.filter(
         (product) =>
-            product.title.toLowerCase().indexOf(query.toLowerCase()) !== -1 //checks if the query exists as a substring within the title. If indexOf returns a value other than -1, the query is found.
+            product.title.toLowerCase().indexOf(query.toLowerCase()) !== -1
     );
 
-    // ----------- Radio Filtering -----------
+    // ----------- Filter Handling -----------
     const handleChange = (event) => {
-        setSelectedCategory(event.target.value);
+        const { name, value } = event.target;
+        setFilters((prev) => ({
+            ...prev,
+            [name]: value,
+        }));
     };
 
     // ------------ Button Filtering -----------
     const handleClick = (event) => {
-        setSelectedCategory(event.target.value);
+        setFilters((prev) => ({
+            ...prev,
+            company: event.target.value,
+        }));
     };
 
-    function filteredData(products, selected, query) {
+    function filteredData(products, filters, query) {
         let filteredProducts = products;
 
         // Filtering Input Items
@@ -38,22 +49,35 @@ function App() {
             filteredProducts = filteredItems;
         }
 
-        // Applying selected filter
-        if (selected) {
-            filteredProducts = filteredProducts.filter(
-                ({ category, color, company, newPrice, title }) =>
-                    category === selected ||
-                    color === selected ||
-                    company === selected ||
-                    newPrice === selected ||
-                    title === selected
-            );
-        }
+        // Apply all active filters
+        Object.entries(filters).forEach(([key, value]) => {
+            if (value) {
+                filteredProducts = filteredProducts.filter((product) => {
+                    if (key === "price") {
+                        // Handle price range filtering
+                        const price = parseInt(product.newPrice);
+                        switch (value) {
+                            case "50":
+                                return price <= 50;
+                            case "100":
+                                return price > 50 && price <= 100;
+                            case "150":
+                                return price > 100 && price <= 150;
+                            case "200":
+                                return price > 150;
+                            default:
+                                return true;
+                        }
+                    }
+                    return product[key] === value;
+                });
+            }
+        });
 
         return filteredProducts;
     }
 
-    const result = filteredData(products, selectedCategory, query);
+    const result = filteredData(products, filters, query);
     return (
         <>
             <div className="flex">
@@ -63,7 +87,10 @@ function App() {
                         query={query}
                         handleInputChange={handleInputChange}
                     />
-                    <Recommended handleClick={handleClick} />
+                    <Recommended
+                        handleClick={handleClick}
+                        selectedCompany={filters.company}
+                    />
                     <Products result={result} />
                 </div>
             </div>

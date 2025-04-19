@@ -10,7 +10,7 @@ const Colors = ({ handleChange }) => {
                     handleChange={handleChange}
                     value="black"
                     title="Black"
-                    name="test1"
+                    name="color"
                     color="black"
                 />
 
@@ -18,7 +18,7 @@ const Colors = ({ handleChange }) => {
                     handleChange={handleChange}
                     value="blue"
                     title="Blue"
-                    name="test1"
+                    name="color"
                     color="blue"
                 />
 
@@ -26,7 +26,7 @@ const Colors = ({ handleChange }) => {
                     handleChange={handleChange}
                     value="red"
                     title="Red"
-                    name="test1"
+                    name="color"
                     color="red"
                 />
 
@@ -34,7 +34,7 @@ const Colors = ({ handleChange }) => {
                     handleChange={handleChange}
                     value="green"
                     title="Green"
-                    name="test1"
+                    name="color"
                     color="green"
                 />
 
@@ -42,7 +42,7 @@ const Colors = ({ handleChange }) => {
                     handleChange={handleChange}
                     value="white"
                     title="White"
-                    name="test1"
+                    name="color"
                     color="white"
                 />
             </div>
