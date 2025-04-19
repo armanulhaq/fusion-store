@@ -13,6 +13,11 @@ const MobileSidebar = ({
 }) => {
     if (!isOpen) return null;
 
+    // Check if any filter is selected
+    const isAnyFilterSelected = Object.values(filters).some(
+        (value) => value !== null
+    );
+
     return (
         <div className="fixed inset-0 z-50 bg-white md:hidden">
             <div className="flex items-center justify-between p-4 border-b">
@@ -46,6 +51,13 @@ const MobileSidebar = ({
                     handleChange={handleChange}
                     selectedColor={filters.color}
                 />
+                <Button
+                    onClick={onClose}
+                    className="w-full mt-5 bg-black text-white hover:bg-gray-800"
+                    disabled={!isAnyFilterSelected}
+                >
+                    Apply Filters
+                </Button>
             </div>
         </div>
     );
