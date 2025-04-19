@@ -3,6 +3,7 @@ import Navigation from "./components/Navigation";
 import Products from "./components/Products";
 import Recommended from "./components/Recommended";
 import Sidebar from "./components/Sidebar/Sidebar";
+import MobileSidebar from "./components/Sidebar/MobileSidebar";
 import products from "@/db/db";
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
         price: null,
         company: null,
     });
+    const [isMobileSidebarOpen, setIsMobileSidebarOpen] = useState(false);
     // ----------- Input Filter -----------
     const [query, setQuery] = useState("");
 
@@ -97,10 +99,11 @@ function App() {
                     clearFilters={clearFilters}
                     filters={filters}
                 />
-                <div>
+                <div className="flex-1">
                     <Navigation
                         query={query}
                         handleInputChange={handleInputChange}
+                        onMenuClick={() => setIsMobileSidebarOpen(true)}
                     />
                     <Recommended
                         handleClick={handleClick}
@@ -109,6 +112,13 @@ function App() {
                     <Products result={result} />
                 </div>
             </div>
+            <MobileSidebar
+                handleChange={handleChange}
+                clearFilters={clearFilters}
+                filters={filters}
+                isOpen={isMobileSidebarOpen}
+                onClose={() => setIsMobileSidebarOpen(false)}
+            />
         </>
     );
 }
