@@ -1,6 +1,4 @@
 import { Input } from "@/components/ui/input";
-import { FaShoppingCart } from "react-icons/fa";
-import { FaHeart } from "react-icons/fa6";
 import { FaUserAlt } from "react-icons/fa";
 import { Menu } from "lucide-react";
 
@@ -27,13 +25,7 @@ const Navigation = ({ handleInputChange, query, onMenuClick }) => {
                     <Menu className="w-6 h-6" />
                 </button>
                 <div className="hidden md:flex gap-4 lg:gap-8">
-                    <a href="#">
-                        <FaShoppingCart className="w-5 h-5" color="black" />
-                    </a>
-                    <a href="#">
-                        <FaHeart className="w-5 h-5" color="black" />
-                    </a>
-                    <a href="#">
+                    <a href="https://github.com/armanulhaq/">
                         <FaUserAlt className="w-5 h-5" color="black" />
                     </a>
                 </div>

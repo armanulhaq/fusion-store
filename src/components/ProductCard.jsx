@@ -101,7 +101,7 @@ const ProductCard = ({
                             Free delivery on orders over $100
                         </span>
                     </div>
-                    <Button className="w-full bg-black hover:bg-gray-800 text-white">
+                    <Button disabled>
                         <ShoppingCart className="w-4 h-4 mr-2" />
                         Add to Cart
                     </Button>
