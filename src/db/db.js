@@ -163,7 +163,7 @@ const data = [
         newPrice: "100",
         company: "Vans",
         color: "red",
-        category: "flats",
+        category: "sneakers",
     },
     {
         img: "https://m.media-amazon.com/images/I/71gpFHJlnoL._AC_UX575_.jpg",
@@ -173,7 +173,7 @@ const data = [
         newPrice: "100",
         company: "Vans",
         color: "white",
-        category: "sandals",
+        category: "sneakers",
     },
     {
         img: "https://m.media-amazon.com/images/I/71pf7VFs9CL._AC_UX575_.jpg",
@@ -183,7 +183,7 @@ const data = [
         newPrice: "100",
         company: "Vans",
         color: "blue",
-        category: "sandals",
+        category: "sneakers",
     },
     {
         img: "https://m.media-amazon.com/images/I/61N4GyWcHPL._AC_UY575_.jpg",
@@ -193,7 +193,7 @@ const data = [
         newPrice: "50",
         company: "Nike",
         color: "black",
-        category: "sandals",
+        category: "sneakers",
     },
     {
         img: "https://m.media-amazon.com/images/I/61bncQ44yML._AC_UX695_.jpg",
@@ -284,7 +284,17 @@ const data = [
         newPrice: "50",
         company: "Adidas",
         color: "black",
-        category: "flats",
+        category: "heels",
+    },
+    {
+        img: "https://m.media-amazon.com/images/I/61WnWPePSwL._SY695_.jpg",
+        title: "Womens Stylish Flat Sandals",
+        reviews: "(123 reviews)",
+        prevPrice: "$140",
+        newPrice: "50",
+        company: "ZaySoo",
+        color: "black",
+        category: "sandals",
     },
 ];
 
