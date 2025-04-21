@@ -1,7 +1,6 @@
-const Input = ({ handleChange, value, title, name, color, selectedValue }) => {
+const Input = ({ handleChange, value, title, name, selectedValue }) => {
     return (
         <div className="flex gap-2 items-center">
-            <div className="checkmark" style={{ backgroundColor: color }}></div>
             <input
                 onChange={handleChange}
                 type="radio"

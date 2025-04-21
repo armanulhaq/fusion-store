@@ -9,17 +9,9 @@ import { Star, ShoppingCart, Truck } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 
-const ProductCard = ({
-    img,
-    title,
-    reviews,
-    prevPrice,
-    newPrice,
-    discount,
-}) => {
+const ProductCard = ({ img, title, reviews, prevPrice, newPrice }) => {
     const sizes = [6, 7, 8, 9, 10];
     const [selectedSize, setSelectedSize] = useState(0);
-    console.log(discount);
 
     return (
         <section>
@@ -37,31 +29,11 @@ const ProductCard = ({
                 <CardDescription className="flex flex-col gap-2 px-4 py-1">
                     <div className="flex gap-1 lg:gap-2">
                         <div className="flex">
-                            <Star
-                                className={cn(
-                                    "w-3 h-3 lg:w-4 lg:h-4 fill-yellow-400 text-yellow-400"
-                                )}
-                            />
-                            <Star
-                                className={cn(
-                                    "w-3 h-3 lg:w-4 lg:h-4 fill-yellow-400 text-yellow-400"
-                                )}
-                            />
-                            <Star
-                                className={cn(
-                                    "w-3 h-3 lg:w-4 lg:h-4 fill-yellow-400 text-yellow-400"
-                                )}
-                            />
-                            <Star
-                                className={cn(
-                                    "w-3 h-3 lg:w-4 lg:h-4 fill-yellow-400 text-yellow-400"
-                                )}
-                            />
-                            <Star
-                                className={cn(
-                                    "w-3 h-3 lg:w-4 lg:h-4 fill-yellow-400 text-yellow-400"
-                                )}
-                            />
+                            <Star className="w-3 h-3 lg:w-4 lg:h-4 fill-yellow-400 text-yellow-400" />
+                            <Star className="w-3 h-3 lg:w-4 lg:h-4 fill-yellow-400 text-yellow-400" />
+                            <Star className="w-3 h-3 lg:w-4 lg:h-4 fill-yellow-400 text-yellow-400" />
+                            <Star className="w-3 h-3 lg:w-4 lg:h-4 fill-yellow-400 text-yellow-400" />
+                            <Star className="w-3 h-3 lg:w-4 lg:h-4 fill-yellow-400 text-yellow-400" />
                         </div>
 
                         <div className="text-xs">{reviews}</div>
